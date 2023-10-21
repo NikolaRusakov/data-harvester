@@ -7784,7 +7784,7 @@ class DuckDbDartBindings {
 
 /// mbstate_t is an opaque object to keep conversion state, during multibyte
 /// stream conversions.  The content must not be referenced by user programs.
-class __mbstate_t extends ffi.Union {
+final class __mbstate_t extends ffi.Union {
   @ffi.Array.multi([128])
   external ffi.Array<ffi.Char> __mbstate8;
 
@@ -7793,7 +7793,7 @@ class __mbstate_t extends ffi.Union {
   external int _mbstateL;
 }
 
-class __darwin_pthread_handler_rec extends ffi.Struct {
+final class __darwin_pthread_handler_rec extends ffi.Struct {
   /// Routine to call
   external ffi
           .Pointer<ffi.NativeFunction<ffi.Void Function(ffi.Pointer<ffi.Void>)>>
@@ -7805,7 +7805,7 @@ class __darwin_pthread_handler_rec extends ffi.Struct {
   external ffi.Pointer<__darwin_pthread_handler_rec> __next;
 }
 
-class _opaque_pthread_attr_t extends ffi.Struct {
+final class _opaque_pthread_attr_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7813,7 +7813,7 @@ class _opaque_pthread_attr_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_cond_t extends ffi.Struct {
+final class _opaque_pthread_cond_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7821,7 +7821,7 @@ class _opaque_pthread_cond_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_condattr_t extends ffi.Struct {
+final class _opaque_pthread_condattr_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7829,7 +7829,7 @@ class _opaque_pthread_condattr_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_mutex_t extends ffi.Struct {
+final class _opaque_pthread_mutex_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7837,7 +7837,7 @@ class _opaque_pthread_mutex_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_mutexattr_t extends ffi.Struct {
+final class _opaque_pthread_mutexattr_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7845,7 +7845,7 @@ class _opaque_pthread_mutexattr_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_once_t extends ffi.Struct {
+final class _opaque_pthread_once_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7853,7 +7853,7 @@ class _opaque_pthread_once_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_rwlock_t extends ffi.Struct {
+final class _opaque_pthread_rwlock_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7861,7 +7861,7 @@ class _opaque_pthread_rwlock_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_rwlockattr_t extends ffi.Struct {
+final class _opaque_pthread_rwlockattr_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7869,7 +7869,7 @@ class _opaque_pthread_rwlockattr_t extends ffi.Struct {
   external ffi.Array<ffi.Char> __opaque;
 }
 
-class _opaque_pthread_t extends ffi.Struct {
+final class _opaque_pthread_t extends ffi.Struct {
   @ffi.Long()
   external int __sig;
 
@@ -7887,7 +7887,7 @@ abstract class idtype_t {
   static const int P_PGID = 2;
 }
 
-class __darwin_arm_exception_state extends ffi.Struct {
+final class __darwin_arm_exception_state extends ffi.Struct {
   /// number of arm exception taken
   @__uint32_t()
   external int __exception;
@@ -7903,7 +7903,7 @@ class __darwin_arm_exception_state extends ffi.Struct {
 
 typedef __uint32_t = ffi.UnsignedInt;
 
-class __darwin_arm_exception_state64 extends ffi.Struct {
+final class __darwin_arm_exception_state64 extends ffi.Struct {
   /// Virtual Fault Address
   @__uint64_t()
   external int __far;
@@ -7919,7 +7919,7 @@ class __darwin_arm_exception_state64 extends ffi.Struct {
 
 typedef __uint64_t = ffi.UnsignedLongLong;
 
-class __darwin_arm_thread_state extends ffi.Struct {
+final class __darwin_arm_thread_state extends ffi.Struct {
   @ffi.Array.multi([13])
   external ffi.Array<__uint32_t> __r;
 
@@ -7940,7 +7940,7 @@ class __darwin_arm_thread_state extends ffi.Struct {
   external int __cpsr;
 }
 
-class __darwin_arm_thread_state64 extends ffi.Struct {
+final class __darwin_arm_thread_state64 extends ffi.Struct {
   @ffi.Array.multi([29])
   external ffi.Array<__uint64_t> __x;
 
@@ -7969,7 +7969,7 @@ class __darwin_arm_thread_state64 extends ffi.Struct {
   external int __pad;
 }
 
-class __darwin_arm_vfp_state extends ffi.Struct {
+final class __darwin_arm_vfp_state extends ffi.Struct {
   @ffi.Array.multi([64])
   external ffi.Array<__uint32_t> __r;
 
@@ -7977,16 +7977,16 @@ class __darwin_arm_vfp_state extends ffi.Struct {
   external int __fpscr;
 }
 
-class __darwin_arm_neon_state64 extends ffi.Opaque {}
+final class __darwin_arm_neon_state64 extends ffi.Opaque {}
 
-class __darwin_arm_neon_state extends ffi.Opaque {}
+final class __darwin_arm_neon_state extends ffi.Opaque {}
 
-class __arm_pagein_state extends ffi.Struct {
+final class __arm_pagein_state extends ffi.Struct {
   @ffi.Int()
   external int __pagein_error;
 }
 
-class __arm_legacy_debug_state extends ffi.Struct {
+final class __arm_legacy_debug_state extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<__uint32_t> __bvr;
 
@@ -8000,7 +8000,7 @@ class __arm_legacy_debug_state extends ffi.Struct {
   external ffi.Array<__uint32_t> __wcr;
 }
 
-class __darwin_arm_debug_state32 extends ffi.Struct {
+final class __darwin_arm_debug_state32 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<__uint32_t> __bvr;
 
@@ -8018,7 +8018,7 @@ class __darwin_arm_debug_state32 extends ffi.Struct {
   external int __mdscr_el1;
 }
 
-class __darwin_arm_debug_state64 extends ffi.Struct {
+final class __darwin_arm_debug_state64 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<__uint64_t> __bvr;
 
@@ -8036,12 +8036,12 @@ class __darwin_arm_debug_state64 extends ffi.Struct {
   external int __mdscr_el1;
 }
 
-class __darwin_arm_cpmu_state64 extends ffi.Struct {
+final class __darwin_arm_cpmu_state64 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<__uint64_t> __ctrs;
 }
 
-class __darwin_mcontext32 extends ffi.Struct {
+final class __darwin_mcontext32 extends ffi.Struct {
   external __darwin_arm_exception_state __es;
 
   external __darwin_arm_thread_state __ss;
@@ -8049,9 +8049,9 @@ class __darwin_mcontext32 extends ffi.Struct {
   external __darwin_arm_vfp_state __fs;
 }
 
-class __darwin_mcontext64 extends ffi.Opaque {}
+final class __darwin_mcontext64 extends ffi.Opaque {}
 
-class __darwin_sigaltstack extends ffi.Struct {
+final class __darwin_sigaltstack extends ffi.Struct {
   /// signal stack base
   external ffi.Pointer<ffi.Void> ss_sp;
 
@@ -8066,7 +8066,7 @@ class __darwin_sigaltstack extends ffi.Struct {
 
 typedef __darwin_size_t = ffi.UnsignedLong;
 
-class __darwin_ucontext extends ffi.Struct {
+final class __darwin_ucontext extends ffi.Struct {
   @ffi.Int()
   external int uc_onstack;
 
@@ -8090,7 +8090,7 @@ class __darwin_ucontext extends ffi.Struct {
 
 typedef __darwin_sigset_t = __uint32_t;
 
-class sigval extends ffi.Union {
+final class sigval extends ffi.Union {
   /// Members as suggested by Annex C of POSIX 1003.1b.
   @ffi.Int()
   external int sival_int;
@@ -8098,7 +8098,7 @@ class sigval extends ffi.Union {
   external ffi.Pointer<ffi.Void> sival_ptr;
 }
 
-class sigevent extends ffi.Struct {
+final class sigevent extends ffi.Struct {
   /// Notification type
   @ffi.Int()
   external int sigev_notify;
@@ -8121,7 +8121,7 @@ class sigevent extends ffi.Struct {
 typedef pthread_attr_t = __darwin_pthread_attr_t;
 typedef __darwin_pthread_attr_t = _opaque_pthread_attr_t;
 
-class __siginfo extends ffi.Struct {
+final class __siginfo extends ffi.Struct {
   /// signal number
   @ffi.Int()
   external int si_signo;
@@ -8167,7 +8167,7 @@ typedef uid_t = __darwin_uid_t;
 typedef __darwin_uid_t = __uint32_t;
 
 /// union for signal handlers
-class __sigaction_u extends ffi.Union {
+final class __sigaction_u extends ffi.Union {
   external ffi.Pointer<ffi.NativeFunction<ffi.Void Function(ffi.Int)>>
       __sa_handler;
 
@@ -8179,7 +8179,7 @@ class __sigaction_u extends ffi.Union {
 }
 
 /// Signal vector template for Kernel user boundary
-class __sigaction extends ffi.Struct {
+final class __sigaction extends ffi.Struct {
   /// signal handler
   external __sigaction_u __sigaction_u1;
 
@@ -8201,7 +8201,7 @@ typedef siginfo_t = __siginfo;
 typedef sigset_t = __darwin_sigset_t;
 
 /// Signal vector "template" used in sigaction call.
-class sigaction extends ffi.Struct {
+final class sigaction extends ffi.Struct {
   /// signal handler
   external __sigaction_u __sigaction_u1;
 
@@ -8216,7 +8216,7 @@ class sigaction extends ffi.Struct {
 
 /// 4.3 compatibility:
 /// Signal vector "template" used in sigvec call.
-class sigvec extends ffi.Struct {
+final class sigvec extends ffi.Struct {
   /// signal handler
   external ffi.Pointer<ffi.NativeFunction<ffi.Void Function(ffi.Int)>>
       sv_handler;
@@ -8231,7 +8231,7 @@ class sigvec extends ffi.Struct {
 }
 
 /// Structure used in sigstack call.
-class sigstack extends ffi.Struct {
+final class sigstack extends ffi.Struct {
   /// signal stack pointer
   external ffi.Pointer<ffi.Char> ss_sp;
 
@@ -8240,7 +8240,7 @@ class sigstack extends ffi.Struct {
   external int ss_onstack;
 }
 
-class timeval extends ffi.Struct {
+final class timeval extends ffi.Struct {
   /// seconds
   @__darwin_time_t()
   external int tv_sec;
@@ -8260,7 +8260,7 @@ typedef __darwin_suseconds_t = __int32_t;
 /// Note: All values other than ru_utime and ru_stime are implementaiton
 /// defined and subject to change in a future release.  Their use
 /// is discouraged for standards compliant programs.
-class rusage extends ffi.Struct {
+final class rusage extends ffi.Struct {
   /// user time used (PL)
   external timeval ru_utime;
 
@@ -8324,7 +8324,7 @@ class rusage extends ffi.Struct {
   external int ru_nivcsw;
 }
 
-class rusage_info_v0 extends ffi.Struct {
+final class rusage_info_v0 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8359,7 +8359,7 @@ class rusage_info_v0 extends ffi.Struct {
   external int ri_proc_exit_abstime;
 }
 
-class rusage_info_v1 extends ffi.Struct {
+final class rusage_info_v1 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8412,7 +8412,7 @@ class rusage_info_v1 extends ffi.Struct {
   external int ri_child_elapsed_abstime;
 }
 
-class rusage_info_v2 extends ffi.Struct {
+final class rusage_info_v2 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8471,7 +8471,7 @@ class rusage_info_v2 extends ffi.Struct {
   external int ri_diskio_byteswritten;
 }
 
-class rusage_info_v3 extends ffi.Struct {
+final class rusage_info_v3 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8557,7 +8557,7 @@ class rusage_info_v3 extends ffi.Struct {
   external int ri_serviced_system_time;
 }
 
-class rusage_info_v4 extends ffi.Struct {
+final class rusage_info_v4 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8667,7 +8667,7 @@ class rusage_info_v4 extends ffi.Struct {
   external int ri_runnable_time;
 }
 
-class rusage_info_v5 extends ffi.Struct {
+final class rusage_info_v5 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8780,7 +8780,7 @@ class rusage_info_v5 extends ffi.Struct {
   external int ri_flags;
 }
 
-class rusage_info_v6 extends ffi.Struct {
+final class rusage_info_v6 extends ffi.Struct {
   @ffi.Array.multi([16])
   external ffi.Array<ffi.Uint8> ri_uuid;
 
@@ -8916,7 +8916,7 @@ class rusage_info_v6 extends ffi.Struct {
 
 /// A structure representing a resource limit.  The address of an instance
 /// of this structure is the second parameter to getrlimit()/setrlimit().
-class rlimit extends ffi.Struct {
+final class rlimit extends ffi.Struct {
   /// current (soft) limit
   @rlim_t()
   external int rlim_cur;
@@ -8929,7 +8929,7 @@ class rlimit extends ffi.Struct {
 /// Resource limit type (low 63 bits, excluding the sign bit)
 typedef rlim_t = __uint64_t;
 
-class proc_rlimit_control_wakeupmon extends ffi.Struct {
+final class proc_rlimit_control_wakeupmon extends ffi.Struct {
   @ffi.Uint32()
   external int wm_flags;
 
@@ -8942,19 +8942,19 @@ typedef __darwin_id_t = __uint32_t;
 
 /// Functions for byte reversed loads.
 @ffi.Packed(1)
-class _OSUnalignedU16 extends ffi.Struct {
+final class _OSUnalignedU16 extends ffi.Struct {
   @ffi.Uint16()
   external int __val;
 }
 
 @ffi.Packed(1)
-class _OSUnalignedU32 extends ffi.Struct {
+final class _OSUnalignedU32 extends ffi.Struct {
   @ffi.Uint32()
   external int __val;
 }
 
 @ffi.Packed(1)
-class _OSUnalignedU64 extends ffi.Struct {
+final class _OSUnalignedU64 extends ffi.Struct {
   @ffi.Uint64()
   external int __val;
 }
@@ -8963,9 +8963,9 @@ class _OSUnalignedU64 extends ffi.Struct {
 /// Structure of the information in the status word returned by wait4.
 /// If w_stopval==_WSTOPPED, then the second structure describes
 /// the information returned, else the first.
-class wait extends ffi.Opaque {}
+final class wait extends ffi.Opaque {}
 
-class div_t extends ffi.Struct {
+final class div_t extends ffi.Struct {
   /// quotient
   @ffi.Int()
   external int quot;
@@ -8975,7 +8975,7 @@ class div_t extends ffi.Struct {
   external int rem;
 }
 
-class ldiv_t extends ffi.Struct {
+final class ldiv_t extends ffi.Struct {
   /// quotient
   @ffi.Long()
   external int quot;
@@ -8985,7 +8985,7 @@ class ldiv_t extends ffi.Struct {
   external int rem;
 }
 
-class lldiv_t extends ffi.Struct {
+final class lldiv_t extends ffi.Struct {
   @ffi.LongLong()
   external int quot;
 
@@ -8996,7 +8996,7 @@ class lldiv_t extends ffi.Struct {
 /// <malloc/_malloc.h>
 typedef malloc_type_id_t = ffi.UnsignedLongLong;
 
-class _malloc_zone_t extends ffi.Opaque {}
+final class _malloc_zone_t extends ffi.Opaque {}
 
 /// <malloc/malloc.h>
 typedef malloc_zone_t = _malloc_zone_t;
@@ -9099,12 +9099,12 @@ abstract class DUCKDB_TYPE {
 
 /// ! Days are stored as days since 1970-01-01
 /// ! Use the duckdb_from_date/duckdb_to_date function to extract individual information
-class duckdb_date extends ffi.Struct {
+final class duckdb_date extends ffi.Struct {
   @ffi.Int32()
   external int days;
 }
 
-class duckdb_date_struct extends ffi.Struct {
+final class duckdb_date_struct extends ffi.Struct {
   @ffi.Int32()
   external int year;
 
@@ -9117,12 +9117,12 @@ class duckdb_date_struct extends ffi.Struct {
 
 /// ! Time is stored as microseconds since 00:00:00
 /// ! Use the duckdb_from_time/duckdb_to_time function to extract individual information
-class duckdb_time extends ffi.Struct {
+final class duckdb_time extends ffi.Struct {
   @ffi.Int64()
   external int micros;
 }
 
-class duckdb_time_struct extends ffi.Struct {
+final class duckdb_time_struct extends ffi.Struct {
   @ffi.Int8()
   external int hour;
 
@@ -9138,18 +9138,18 @@ class duckdb_time_struct extends ffi.Struct {
 
 /// ! Timestamps are stored as microseconds since 1970-01-01
 /// ! Use the duckdb_from_timestamp/duckdb_to_timestamp function to extract individual information
-class duckdb_timestamp extends ffi.Struct {
+final class duckdb_timestamp extends ffi.Struct {
   @ffi.Int64()
   external int micros;
 }
 
-class duckdb_timestamp_struct extends ffi.Struct {
+final class duckdb_timestamp_struct extends ffi.Struct {
   external duckdb_date_struct date;
 
   external duckdb_time_struct time;
 }
 
-class duckdb_interval extends ffi.Struct {
+final class duckdb_interval extends ffi.Struct {
   @ffi.Int32()
   external int months;
 
@@ -9163,7 +9163,7 @@ class duckdb_interval extends ffi.Struct {
 /// ! Hugeints are composed in a (lower, upper) component
 /// ! The value of the hugeint is upper * 2^64 + lower
 /// ! For easy usage, the functions duckdb_hugeint_to_double/duckdb_double_to_hugeint are recommended
-class duckdb_hugeint extends ffi.Struct {
+final class duckdb_hugeint extends ffi.Struct {
   @ffi.Uint64()
   external int lower;
 
@@ -9171,7 +9171,7 @@ class duckdb_hugeint extends ffi.Struct {
   external int upper;
 }
 
-class duckdb_decimal extends ffi.Struct {
+final class duckdb_decimal extends ffi.Struct {
   @ffi.Uint8()
   external int width;
 
@@ -9181,7 +9181,7 @@ class duckdb_decimal extends ffi.Struct {
   external duckdb_hugeint value;
 }
 
-class duckdb_string extends ffi.Struct {
+final class duckdb_string extends ffi.Struct {
   external ffi.Pointer<ffi.Char> data;
 
   @idx_t()
@@ -9194,17 +9194,17 @@ class duckdb_string extends ffi.Struct {
 typedef idx_t = ffi.Uint64;
 
 /// The internal data representation of a VARCHAR/BLOB column
-class duckdb_string_t extends ffi.Struct {
+final class duckdb_string_t extends ffi.Struct {
   external UnnamedUnion1 value;
 }
 
-class UnnamedUnion1 extends ffi.Union {
+final class UnnamedUnion1 extends ffi.Union {
   external UnnamedStruct3 pointer;
 
   external UnnamedStruct4 inlined;
 }
 
-class UnnamedStruct3 extends ffi.Struct {
+final class UnnamedStruct3 extends ffi.Struct {
   @ffi.Uint32()
   external int length;
 
@@ -9214,7 +9214,7 @@ class UnnamedStruct3 extends ffi.Struct {
   external ffi.Pointer<ffi.Char> ptr;
 }
 
-class UnnamedStruct4 extends ffi.Struct {
+final class UnnamedStruct4 extends ffi.Struct {
   @ffi.Uint32()
   external int length;
 
@@ -9222,14 +9222,14 @@ class UnnamedStruct4 extends ffi.Struct {
   external ffi.Array<ffi.Char> inlined;
 }
 
-class duckdb_blob extends ffi.Struct {
+final class duckdb_blob extends ffi.Struct {
   external ffi.Pointer<ffi.Void> data;
 
   @idx_t()
   external int size;
 }
 
-class duckdb_list_entry extends ffi.Struct {
+final class duckdb_list_entry extends ffi.Struct {
   @ffi.Uint64()
   external int offset;
 
@@ -9237,7 +9237,7 @@ class duckdb_list_entry extends ffi.Struct {
   external int length;
 }
 
-class duckdb_column extends ffi.Struct {
+final class duckdb_column extends ffi.Struct {
   /// deprecated, use duckdb_column_data
   external ffi.Pointer<ffi.Void> __deprecated_data;
 
@@ -9254,7 +9254,7 @@ class duckdb_column extends ffi.Struct {
   external ffi.Pointer<ffi.Void> internal_data;
 }
 
-class duckdb_result extends ffi.Struct {
+final class duckdb_result extends ffi.Struct {
   /// deprecated, use duckdb_column_count
   @idx_t()
   external int __deprecated_column_count;
@@ -9276,63 +9276,63 @@ class duckdb_result extends ffi.Struct {
   external ffi.Pointer<ffi.Void> internal_data;
 }
 
-class _duckdb_database extends ffi.Struct {
+final class _duckdb_database extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __db;
 }
 
-class _duckdb_connection extends ffi.Struct {
+final class _duckdb_connection extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __conn;
 }
 
-class _duckdb_prepared_statement extends ffi.Struct {
+final class _duckdb_prepared_statement extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __prep;
 }
 
-class _duckdb_extracted_statements extends ffi.Struct {
+final class _duckdb_extracted_statements extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __extrac;
 }
 
-class _duckdb_pending_result extends ffi.Struct {
+final class _duckdb_pending_result extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __pend;
 }
 
-class _duckdb_appender extends ffi.Struct {
+final class _duckdb_appender extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __appn;
 }
 
-class _duckdb_arrow extends ffi.Struct {
+final class _duckdb_arrow extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __arrw;
 }
 
-class _duckdb_arrow_stream extends ffi.Struct {
+final class _duckdb_arrow_stream extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __arrwstr;
 }
 
-class _duckdb_config extends ffi.Struct {
+final class _duckdb_config extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __cnfg;
 }
 
-class _duckdb_arrow_schema extends ffi.Struct {
+final class _duckdb_arrow_schema extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __arrs;
 }
 
-class _duckdb_arrow_array extends ffi.Struct {
+final class _duckdb_arrow_array extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __arra;
 }
 
-class _duckdb_logical_type extends ffi.Struct {
+final class _duckdb_logical_type extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __lglt;
 }
 
-class _duckdb_data_chunk extends ffi.Struct {
+final class _duckdb_data_chunk extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __dtck;
 }
 
-class _duckdb_vector extends ffi.Struct {
+final class _duckdb_vector extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __vctr;
 }
 
-class _duckdb_value extends ffi.Struct {
+final class _duckdb_value extends ffi.Struct {
   external ffi.Pointer<ffi.Void> __val;
 }
 
