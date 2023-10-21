@@ -1,0 +1,9 @@
+name: duckdb_dart
+
+packages:
+  # - "example/"
+  - "."
+
+scripts:
+  analyze:
+    exec: dart analyze .

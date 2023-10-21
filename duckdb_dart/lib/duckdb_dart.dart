@@ -10,6 +10,7 @@ import 'dart:ffi';
 import 'dart:io';
 import 'dart:isolate';
 
+export 'duckdb_dart_bindings_generated.dart';
 import 'duckdb_dart_bindings_generated.dart';
 
 /// A very short-lived native function.
@@ -17,7 +18,7 @@ import 'duckdb_dart_bindings_generated.dart';
 /// For very short-lived functions, it is fine to call them on the main isolate.
 /// They will block the Dart execution while running the native function, so
 /// only do this for native functions which are guaranteed to be short-lived.
-int sum(int a, int b) => _bindings.sum(a, b);
+/* int sum(int a, int b) => _bindings.sum(a, b);
 
 /// A longer lived native function, which occupies the thread calling it.
 ///
@@ -37,17 +38,23 @@ Future<int> sumAsync(int a, int b) async {
   _sumRequests[requestId] = completer;
   helperIsolateSendPort.send(request);
   return completer.future;
-}
+} */
 
-const String _libName = 'duckdb_dart';
+// const String _libName = 'duckdb_dart';
+const String _libName = 'duckdb';
+const testKey = 'FLUTTER_TEST';
 
 /// The dynamic library in which the symbols for [DuckDbDartBindings] can be found.
 final DynamicLibrary _dylib = () {
+  if (Platform.environment.containsKey(testKey) &&
+      Platform.environment[testKey] == '1') {
+    return DynamicLibrary.open('assets/osx/lib$_libName.dylib');
+  }
   if (Platform.isMacOS || Platform.isIOS) {
     return DynamicLibrary.open('$_libName.framework/$_libName');
   }
   if (Platform.isAndroid || Platform.isLinux) {
-    return DynamicLibrary.open('lib$_libName.so');
+    return DynamicLibrary.open('assets/linux/lib$_libName.so');
   }
   if (Platform.isWindows) {
     return DynamicLibrary.open('$_libName.dll');
@@ -57,6 +64,8 @@ final DynamicLibrary _dylib = () {
 
 /// The bindings to the native functions in [_dylib].
 final DuckDbDartBindings _bindings = DuckDbDartBindings(_dylib);
+
+DynamicLibrary openLibrary() => _dylib;
 
 /// A request to compute `sum`.
 ///
@@ -118,9 +127,9 @@ Future<SendPort> _helperIsolateSendPort = () async {
       ..listen((dynamic data) {
         // On the helper isolate listen to requests and respond to them.
         if (data is _SumRequest) {
-          final int result = _bindings.sum_long_running(data.a, data.b);
-          final _SumResponse response = _SumResponse(data.id, result);
-          sendPort.send(response);
+          // final int result = _bindings.sum_long_running(data.a, data.b);
+          // final _SumResponse response = _SumResponse(data.id, result);
+          // sendPort.send(response);
           return;
         }
         throw UnsupportedError('Unsupported message type: ${data.runtimeType}');
